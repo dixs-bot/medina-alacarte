@@ -515,6 +515,6 @@ function handleProfile() {
   if (isAuthenticated()) {
     showToast('Fitur profil segera hadir', 'info');
   } else {
-    window.location.href = '/login.html';
+    window.location.href = './pages/login.html';
   }
 }
