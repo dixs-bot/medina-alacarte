@@ -23,6 +23,7 @@
 import { getSupabase, isSupabaseReady } from './supabase.js';
 import { storage } from '../utils/storage.js';
 import '../styles/loading.css';
+import '../styles/skeleton.css';
 /* ================================================================
    CONSTANTS
    ================================================================ */
