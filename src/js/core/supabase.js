@@ -1,26 +1,44 @@
-/**
- * Medina Alacarte — Supabase Client Singleton
- * Menghindari multiple instance, handle ketika belum dikonfigurasi
- */
 import { createClient } from '@supabase/supabase-js';
 import { CONFIG } from './config.js';
 
-let _client = null;
+let client = null;
 
-export function getSupabase() {
-  if (_client) return _client;
-
-  if (!CONFIG.SUPABASE_URL || CONFIG.SUPABASE_URL.includes('YOUR_PROJECT')) {
-    return null;
+function validateConfig() {
+  if (!CONFIG.SUPABASE_URL) {
+    throw new Error('Missing SUPABASE_URL');
   }
 
-  _client = createClient(CONFIG.SUPABASE_URL, CONFIG.SUPABASE_ANON_KEY, {
-    auth: { persistSession: true, autoRefreshToken: true }
-  });
+  if (!CONFIG.SUPABASE_ANON_KEY) {
+    throw new Error('Missing SUPABASE_ANON_KEY');
+  }
+}
 
-  return _client;
+export function getSupabase() {
+  if (client) {
+    return client;
+  }
+
+  validateConfig();
+
+  client = createClient(
+    CONFIG.SUPABASE_URL,
+    CONFIG.SUPABASE_ANON_KEY,
+    {
+      auth: {
+        persistSession: true,
+        autoRefreshToken: true,
+        detectSessionInUrl: true,
+      },
+    }
+  );
+
+  return client;
 }
 
 export function isSupabaseReady() {
-  return getSupabase() !== null;
+  try {
+    return !!getSupabase();
+  } catch {
+    return false;
+  }
 }
