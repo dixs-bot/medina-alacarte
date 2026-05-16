@@ -14,7 +14,7 @@ import { storage } from '../utils/storage.js';
    CONFIGURATION
    ================================================================ */
 
-const REDIRECT_SUCCESS = '/home.html';
+const REDIRECT_SUCCESS = './pages/home.html';
 const TOAST_DURATION = 3200;
 
 /* ================================================================
