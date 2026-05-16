@@ -1,0 +1,28 @@
+/* ── Tablet (768px+) ── */
+@media (min-width: 768px) {
+  .container { padding: 0 var(--sp-6); }
+  .section-title { font-size: var(--fs-2xl); }
+
+  .product-grid { grid-template-columns: repeat(3, 1fr) !important; }
+  .category-scroll { justify-content: center; }
+  .hero-content { max-width: 520px; }
+  .hero-title { font-size: var(--fs-3xl) !important; }
+
+  .checkout-layout { display: grid; grid-template-columns: 1fr 380px; gap: var(--sp-8); }
+  .bottom-nav { display: none !important; }
+}
+
+/* ── Desktop (1024px+) ── */
+@media (min-width: 1024px) {
+  .product-grid { grid-template-columns: repeat(4, 1fr) !important; }
+  .hero-section { min-height: 420px; }
+  .floating-cart { display: none !important; }
+}
+
+/* ── Small Mobile ── */
+@media (max-width: 374px) {
+  :root { --sp-4: 12px; --sp-6: 16px; }
+  .hero-title { font-size: 1.5rem !important; }
+  .section-title { font-size: var(--fs-lg); }
+  .product-grid { grid-template-columns: repeat(2, 1fr) !important; gap: var(--sp-3) !important; }
+}

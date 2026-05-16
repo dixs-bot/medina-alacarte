@@ -1,0 +1,71 @@
+:root {
+  /* ── Brand Colors ── */
+  --c-primary: #4B2E2B;
+  --c-primary-mid: #6F4E37;
+  --c-accent: #C4A484;
+  --c-accent-light: #E6D3B3;
+  --c-bg: #F5F5F5;
+  --c-dark: #2A1B17;
+  --c-white: #FFFFFF;
+  --c-text: #2A1B17;
+  --c-text-muted: #8B7355;
+  --c-border: #E6D3B3;
+  --c-success: #4A7C59;
+  --c-error: #C0392B;
+  --c-warning: #D4A017;
+
+  /* ── Typography ── */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', -apple-system, sans-serif;
+
+  --fs-xs: 0.7rem;
+  --fs-sm: 0.8rem;
+  --fs-base: 0.95rem;
+  --fs-md: 1.1rem;
+  --fs-lg: 1.35rem;
+  --fs-xl: 1.75rem;
+  --fs-2xl: 2.25rem;
+  --fs-3xl: 3rem;
+
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* ── Spacing ── */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+  --sp-10: 40px;
+  --sp-12: 48px;
+  --sp-16: 64px;
+
+  /* ── Radius ── */
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 16px;
+  --r-xl: 24px;
+  --r-full: 999px;
+
+  /* ── Shadows ── */
+  --shadow-sm: 0 1px 4px rgba(42,27,23,0.06);
+  --shadow-md: 0 2px 16px rgba(42,27,23,0.08);
+  --shadow-lg: 0 8px 32px rgba(42,27,23,0.12);
+  --shadow-xl: 0 16px 48px rgba(42,27,23,0.16);
+
+  /* ── Transitions ── */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast: 150ms;
+  --dur-base: 250ms;
+  --dur-slow: 400ms;
+
+  /* ── Layout ── */
+  --max-w: 1200px;
+  --nav-h: 64px;
+  --bottom-nav-h: 64px;
+}

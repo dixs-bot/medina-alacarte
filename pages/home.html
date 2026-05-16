@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#4B2E2B" />
+  <title>Medina Alacarte ☕ — Premium Coffee</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/src/styles/variables.css" />
+  <link rel="stylesheet" href="/src/styles/global.css" />
+  <link rel="stylesheet" href="/src/styles/animation.css" />
+  <link rel="stylesheet" href="/src/styles/home.css" />
+</head>
+<body>
+
+  <!-- ====== NAVBAR ====== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar-inner container">
+      <a href="/home.html" class="navbar-brand">
+        <span class="navbar-logo">☕</span>
+        <span class="navbar-name">Medina</span>
+      </a>
+      <div class="navbar-actions">
+        <button class="navbar-icon-btn" id="nav-search-btn" aria-label="Cari menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="navbar-icon-btn" id="nav-cart-btn" aria-label="Keranjang">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <span class="navbar-badge" id="nav-cart-badge"></span>
+        </button>
+        <button class="navbar-avatar" id="nav-profile-btn" aria-label="Profil">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ====== MAIN CONTENT ====== -->
+  <main class="home-page" id="home-page">
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <img src="https://picsum.photos/seed/coffeehero7/800/600" alt="" loading="eager" />
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content container">
+        <span class="hero-badge">✨ Best Specialty Coffee</span>
+        <h1 class="hero-title">Nikmati Ritual<br/>Kopi Premium</h1>
+        <p class="hero-desc">Biji kopi pilihan dari petani lokal terbaik, diseduh dengan teknik modern untuk pengalaman rasa yang tak terlupakan.</p>
+        <a href="#products" class="btn btn-hero-cta">
+          Jelajahi Menu
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- Search Bar -->
+    <div class="search-section container" id="search-section">
+      <div class="search-bar">
+        <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input
+          type="text"
+          class="search-input"
+          id="search-input"
+          placeholder="Cari coffee, pastry, atau menu favorit..."
+          autocomplete="off"
+        />
+        <button class="search-clear" id="search-clear" aria-label="Hapus pencarian" style="display:none">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Promo Slider -->
+    <section class="promo-section container reveal-section">
+      <div class="promo-slider" id="promo-slider">
+        <div class="promo-track" id="promo-track">
+          <div class="promo-slide">
+            <div class="promo-card promo-card--1">
+              <span class="promo-card-tag">LIMITED</span>
+              <h3 class="promo-card-title">Buy 2 Get 1 Free</h3>
+              <p class="promo-card-desc">Untuk semua varian Signature Coffee</p>
+              <span class="promo-card-code">KODE: MEDINA221</span>
+            </div>
+          </div>
+          <div class="promo-slide">
+            <div class="promo-card promo-card--2">
+              <span class="promo-card-tag">NEW</span>
+              <h3 class="promo-card-title">Pistachio Latte</h3>
+              <p class="promo-card-desc">Menu terbaru — creamy & nutty goodness</p>
+              <span class="promo-card-code">Coba Sekarang →</span>
+            </div>
+          </div>
+          <div class="promo-slide">
+            <div class="promo-card promo-card--3">
+              <span class="promo-card-tag">HAPPY HOUR</span>
+              <h3 class="promo-card-title">Diskon 30%</h3>
+              <p class="promo-card-desc">Setiap hari Senin–Jumat, 14.00–17.00</p>
+              <span class="promo-card-code">Syarat & Ketentuan</span>
+            </div>
+          </div>
+        </div>
+        <div class="promo-dots" id="promo-dots"></div>
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="category-section container reveal-section">
+      <div class="section-header">
+        <h2 class="section-title">Kategori</h2>
+      </div>
+      <div class="category-scroll" id="category-list"></div>
+    </section>
+
+    <!-- Best Seller -->
+    <section class="products-section container reveal-section" id="best-seller-section">
+      <div class="section-header">
+        <h2 class="section-title">Best Seller</h2>
+        <a href="#products" class="section-link">Lihat Semua →</a>
+      </div>
+      <div class="product-grid" id="best-seller-grid">
+        <div class="skeleton-grid">
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- All Products / Popular Menu -->
+    <section class="products-section container reveal-section" id="products">
+      <div class="section-header">
+        <h2 class="section-title" id="products-section-title">Semua Menu</h2>
+      </div>
+      <div class="product-grid" id="product-grid">
+        <div class="skeleton-grid">
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+        </div>
+      </div>
+      <div class="product-empty" id="product-empty" style="display:none">
+        <span class="product-empty-icon">☕</span>
+        <p>Tidak ada menu yang ditemukan</p>
+      </div>
+    </section>
+
+    <!-- Bottom spacer for floating elements -->
+    <div class="bottom-spacer"></div>
+
+  </main>
+
+  <!-- ====== FLOATING CART ====== -->
+  <button class="floating-cart" id="floating-cart-btn" aria-label="Buka keranjang">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+    <span class="floating-cart-badge" id="floating-cart-badge"></span>
+  </button>
+
+  <!-- ====== BOTTOM NAVIGATION ====== -->
+  <nav class="bottom-nav" id="bottom-nav">
+    <a href="/home.html" class="bnav-item active" data-page="home">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <span>Beranda</span>
+    </a>
+    <a href="#products" class="bnav-item" data-page="menu">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      <span>Menu</span>
+    </a>
+    <button class="bnav-item bnav-cart" id="bnav-cart-btn" data-page="cart">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      <span>Keranjang</span>
+      <span class="bnav-badge" id="bnav-cart-badge"></span>
+    </button>
+    <button class="bnav-item" id="bnav-profile-btn" data-page="profile">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <span>Profil</span>
+    </button>
+  </nav>
+
+  <!-- ====== CART SIDEBAR ====== -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-sidebar-header">
+      <h2 class="cart-sidebar-title">Keranjang</h2>
+      <button class="cart-sidebar-close" id="cart-close-btn" aria-label="Tutup keranjang">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="cart-sidebar-body" id="cart-body"></div>
+    <div class="cart-sidebar-footer" id="cart-footer"></div>
+  </aside>
+
+  <!-- ====== TOAST CONTAINER ====== -->
+  <div class="toast-stack" id="toast-stack" aria-live="polite"></div>
+
+  <script type="module" src="/src/js/home/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "Medina Alacarte",
+  "short_name": "Medina",
+  "description": "Premium Coffee Shop Ordering",
+  "start_url": "/home.html",
+  "display": "standalone",
+  "background_color": "#F5F5F5",
+  "theme_color": "#4B2E2B",
+  "icons": [
+    { "src": "/src/assets/logo/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/src/assets/logo/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#4B2E2B" />
+  <title>Pesanan Berhasil — Medina Alacarte ☕</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/src/styles/variables.css" />
+  <link rel="stylesheet" href="/src/styles/global.css" />
+  <link rel="stylesheet" href="/src/styles/animation.css" />
+  <link rel="stylesheet" href="/src/styles/checkout.css" />
+</head>
+<body>
+
+  <main class="success-page">
+    <div class="success-card anim-scale">
+
+      <!-- Animated check icon -->
+      <div class="success-icon-wrap">
+        <div class="success-icon-circle">
+          <svg class="success-icon-check" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+        </div>
+      </div>
+
+      <h1 class="success-title">Pesanan Berhasil! 🎉</h1>
+      <p class="success-desc">Pesanan kamu sudah dikirim via WhatsApp. Kami akan segera memproses pesananmu.</p>
+
+      <div class="success-info">
+        <div class="success-info-row">
+          <span class="success-info-label">Status</span>
+          <span class="success-info-value success-info-value--pending">Menunggu Konfirmasi</span>
+        </div>
+        <div class="success-info-row">
+          <span class="success-info-label">Pembayaran</span>
+          <span class="success-info-value">Sesuai pesanan</span>
+        </div>
+      </div>
+
+      <div class="success-actions">
+        <a href="/home.html" class="btn btn-primary btn-block btn-lg">Kembali ke Menu</a>
+        <button class="btn btn-outline btn-block" id="success-new-order" type="button">Pesan Lagi</button>
+      </div>
+
+      <p class="success-note">
+        ☕ Terima kasih sudah memesan di Medina Alacarte. Kopi terbaik untuk hari terbaikmu!
+      </p>
+
+    </div>
+  </main>
+
+  <style>
+    .success-page {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100dvh;
+      padding: var(--sp-6) var(--sp-4);
+      background: linear-gradient(160deg, var(--c-bg) 0%, var(--c-accent-light) 100%);
+    }
+
+    .success-card {
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+      padding: var(--sp-10) var(--sp-6);
+    }
+
+    .success-icon-wrap {
+      margin-bottom: var(--sp-6);
+    }
+
+    .success-icon-circle {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #4A7C59 0%, #3D6B4E 100%);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 32px rgba(74, 124, 89, 0.3);
+      animation: successPulse 2s ease-in-out infinite;
+    }
+
+    .success-icon-check {
+      color: var(--c-white);
+      stroke-dasharray: 40;
+      stroke-dashoffset: 40;
+      animation: drawCheck 0.6s 0.4s var(--ease) forwards;
+    }
+
+    @keyframes drawCheck {
+      to { stroke-dashoffset: 0; }
+    }
+
+    @keyframes successPulse {
+      0%, 100% { box-shadow: 0 8px 32px rgba(74, 124, 89, 0.3); }
+      50% { box-shadow: 0 8px 40px rgba(74, 124, 89, 0.45); }
+    }
+
+    .success-title {
+      font-family: var(--font-display);
+      font-size: var(--fs-xl);
+      font-weight: var(--fw-bold);
+      color: var(--c-dark);
+      margin-bottom: var(--sp-2);
+    }
+
+    .success-desc {
+      font-size: var(--fs-sm);
+      color: var(--c-text-muted);
+      line-height: 1.65;
+      margin-bottom: var(--sp-6);
+    }
+
+    .success-info {
+      background: var(--c-white);
+      border-radius: var(--r-md);
+      padding: var(--sp-4);
+      margin-bottom: var(--sp-6);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .success-info-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: var(--sp-2) 0;
+    }
+
+    .success-info-row:first-child {
+      border-bottom: 1px solid var(--c-bg);
+      padding-bottom: var(--sp-3);
+      margin-bottom: var(--sp-1);
+    }
+
+    .success-info-label {
+      font-size: var(--fs-sm);
+      color: var(--c-text-muted);
+    }
+
+    .success-info-value {
+      font-size: var(--fs-sm);
+      font-weight: var(--fw-semibold);
+      color: var(--c-dark);
+    }
+
+    .success-info-value--pending {
+      color: #D4A017;
+      background: rgba(212, 160, 23, 0.1);
+      padding: 2px var(--sp-2);
+      border-radius: var(--r-full);
+      font-size: var(--fs-xs);
+    }
+
+    .success-actions {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-3);
+      margin-bottom: var(--sp-6);
+    }
+
+    .success-note {
+      font-size: var(--fs-xs);
+      color: var(--c-text-muted);
+      line-height: 1.6;
+      max-width: 280px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 374px) {
+      .success-card { padding: var(--sp-6) var(--sp-4); }
+      .success-title { font-size: var(--fs-lg); }
+      .success-icon-circle { width: 72px; height: 72px; }
+      .success-icon-check { width: 32px; height: 32px; }
+    }
+  </style>
+
+  <script type="module">
+    document.getElementById('success-new-order')?.addEventListener('click', () => {
+      window.location.href = '/home.html';
+    });
+  </script>
+</body>
+</html>
