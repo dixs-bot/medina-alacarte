@@ -80,7 +80,7 @@ async function init() {
     /* Fallback: tetap redirect ke login */
     completeProgressBar();
     await delay(REDIRECT_DELAY);
-    window.location.href = '/login.html';
+    window.location.href = './pages/login.html';
   }
 }
 
@@ -109,25 +109,25 @@ async function resolveEntryPoint() {
           email: session.user.email,
           name: session.user.user_metadata?.name || session.user.email?.split('@')[0] || ''
         });
-        return '/home.html';
+        return './pages/home.html';
       }
     } catch (err) {
       console.warn('[App] Supabase session check failed:', err.message);
     }
 
     /* Supabase ada tapi belum login */
-    return '/login.html';
+    return './pages/login.html';
   }
 
   /* Fallback: cek localStorage */
   const cachedUser = storage.get(AUTH_KEY, null);
 
   if (cachedUser && cachedUser.id) {
-    return '/home.html';
+    return './pages/home.html';
   }
 
   /* Default: belum login */
-  return '/login.html';
+  return './pages/login.html';
 }
 
 /* ================================================================
