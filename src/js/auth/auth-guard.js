@@ -21,7 +21,7 @@ export function isAuthenticated() {
 export function requireAuth() {
   const user = getUser();
   if (!user) {
-    window.location.href = '/login.html';
+    window.location.href = './pages/login.html';
     return null;
   }
   return user;
