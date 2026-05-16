@@ -14,7 +14,7 @@ import { storage } from '../utils/storage.js';
    CONFIGURATION
    ================================================================ */
 
-const REDIRECT_SUCCESS = '/login.html';
+const REDIRECT_SUCCESS = './pages/login.html';
 const TOAST_DURATION = 3200;
 
 const STRENGTH_LABELS = ['', 'Lemah', 'Cukup', 'Bagus', 'Kuat'];
